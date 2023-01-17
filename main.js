@@ -14,15 +14,18 @@ button[0].className = 'header__menu-button'
 
 
 const section = document.body.querySelector('section')
-const image = document.body.querySelector('img')
+const image = document.body.getElementsByTagName('img')
 const h3 = document.body.querySelectorAll('h3')
 const p = document.body.getElementsByTagName('p')
 let listParagraph = Array.from(p)
 let listH3 = Array.from(h3)
+let listImage = Array.from(image)
 
 
 section.className = 'gallery'
-image.className = 'gallery__item__image'
+for (let i=0; i < listImage.length; i++) {
+    listImage[i].className = 'gallery__item__image'
+}
 for (let i = 0; i < listH3.length; i++) {
     listH3[i].className = 'gallery__item__text'
 }
